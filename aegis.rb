@@ -5,20 +5,20 @@
 class Aegis < Formula
   desc ""
   homepage "https://github.com/lucasloureiror/AegisPass"
-  version "1.2.1"
+  version "1.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.1/AegisPass_Darwin_arm64.tar.gz"
-      sha256 "22876aeda3a8375714fda741e712d93394f9c09ba4cea683c1ab666db4a1e7cf"
+      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.2/AegisPass_Darwin_arm64.tar.gz"
+      sha256 "2403d04f0309c060235abce02d89eacf83bc93d0fec34eeeac07e7a2adf304ed"
 
       def install
         bin.install "aegis"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.1/AegisPass_Darwin_x86_64.tar.gz"
-      sha256 "76affb03d1e5f6642956a18716faf364d7f6b6151e16bba70ed35c1a24771e1f"
+      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.2/AegisPass_Darwin_x86_64.tar.gz"
+      sha256 "58d5e4a44c7495759bf9253d9b2ce3637d2cdc39548cce3960a347e3482f8996"
 
       def install
         bin.install "aegis"
@@ -27,17 +27,17 @@ class Aegis < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.1/AegisPass_Linux_arm64.tar.gz"
-      sha256 "3709c68c3cb44bb01591c70eec0c74d5715850114811b462ecb4c04ffe1e754a"
+    if Hardware::CPU.intel?
+      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.2/AegisPass_Linux_x86_64.tar.gz"
+      sha256 "f83e7437ce0788e6300cb53167f399124f9a7c5d9650b26af3bacf6c9e96483c"
 
       def install
         bin.install "aegis"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.1/AegisPass_Linux_x86_64.tar.gz"
-      sha256 "b52ce80a48be24c72bedc1ae63cf6d4ff8f8f2b555e6ce8afc5b9edf9d8b317d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lucasloureiror/AegisPass/releases/download/v1.2.2/AegisPass_Linux_arm64.tar.gz"
+      sha256 "17d16fe0d54b900e8e3c2929ad472d631a9dd990bf3d86148ab56bd2ebd42206"
 
       def install
         bin.install "aegis"
